@@ -51,8 +51,7 @@ Preprocess the text data by performing steps such as removing HTML tags, convert
 *Hint: look at lab **2** for a refresher on Data Preprocessing*
 ```python
 # Load the IMDB dataset (top 5000 most frequent words)
-vocab_size = #fill in
-# Limit vocabulary for faster training
+vocab_size = # Fill in - Limit vocabulary for faster training
 (X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=vocab_size)
 ```
 
@@ -60,7 +59,7 @@ vocab_size = #fill in
 Tokenize the text data and pad or truncate the sequences to a fixed length for input to the LSTM network.
 
 ```python
-max_len = # Fill in  # Maximum review length
+max_len = # Fill in - Maximum review length
 X_train = sequence.pad_sequences(X_train, maxlen=max_len)
 X_test = sequence.pad_sequences(X_train, maxlen=max_len)
 ```
