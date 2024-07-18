@@ -6,7 +6,7 @@ Natural Language Processing (NLP) is a field of artificial intelligence that dea
 ## Notes
 
 - **ChatGPT Encouraged:** Feel free to use ChatGPT during this lab session to ask questions about installation procedures or Python code.
-- **Screen Recording for Credit:** Please prepare a short screen recording demonstrating your work before the end of the lab. The lab assistant will review your recording and may ask questions to confirm your understanding and log your credits.
+- **Submit source code on D2L for Credit:**
 
 ## Lecture 4: Natural Language Processing (NLP) Basics
 
