@@ -47,6 +47,11 @@ We will use the IMDB movie review dataset, which consists of 50,000 reviews labe
 Preprocess the text data by performing steps such as removing HTML tags, converting to lowercase, and removing stop words.
 
 *Hint: look at lab **2** for a refresher on Data Preprocessing*
+```python
+# Load the IMDB dataset (top 5000 most frequent words)
+vocab_size = #fill in # Limit vocabulary for faster training
+(X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=vocab_size)
+```
 
 ### Tokenization and Padding
 Tokenize the text data and pad or truncate the sequences to a fixed length for input to the LSTM network.
