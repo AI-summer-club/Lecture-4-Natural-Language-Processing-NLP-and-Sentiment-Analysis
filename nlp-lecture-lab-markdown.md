@@ -99,4 +99,5 @@ print(f'Test accuracy: {test_acc:.4f}')
 ```
 
 ### Model Improvement
+Put the code you finished into ChatGPT to evaluate the model
 Explore techniques to improve the model's performance, such as hyperparameter tuning, adding dropout layers, or using pre-trained language models (e.g., BERT).
