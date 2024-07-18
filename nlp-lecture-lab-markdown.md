@@ -5,6 +5,8 @@ Natural Language Processing (NLP) is a field of artificial intelligence that dea
 
 ## Notes
 
+-**Use Google Colab for this lab**
+    - When you open colab go to RAM/Disk -> Change runtime type -> T4 GPU
 - **ChatGPT Encouraged:** Feel free to use ChatGPT during this lab session to ask questions about installation procedures or Python code.
 - **Submit source code on D2L for Credit**
 
@@ -58,8 +60,8 @@ Tokenize the text data and pad or truncate the sequences to a fixed length for i
 
 ```python
 max_len = # Fill in  # Maximum review length
-X_train = sequence.pad_sequences(# Fill in, maxlen=max_len)
-X_test = sequence.pad_sequences(# Fill in, maxlen=max_len)
+X_train = sequence.pad_sequences(X_train, maxlen=max_len)
+X_test = sequence.pad_sequences(X_train, maxlen=max_len)
 ```
 
 ### Word Embeddings
@@ -69,28 +71,30 @@ Load pre-trained word embeddings (e.g., GloVe) or train your own word embeddings
 Build an LSTM model with an embedding layer, LSTM layer(s), and a dense output layer for binary classification (positive/negative).
 
 ```python
+output_dimension = # pick a number from 100-200
 model = Sequential([
-    # Embedding layer: Maps words to dense vectors
-    Embedding(# Fill in, # Fill in), 
+    # Embedding layer: Maps words to dense vectors: Embedding(input_dimension, output_dimension)
+    Embedding(# vocabulary size #, output_dimension), 
     # LSTM layer: Captures sequential information
-    LSTM(# Fill in),  
+    LSTM(# output_dimension),  
     # Output layer: Binary classification (positive/negative)
-    Dense(# Fill in, # Fill in)  
+    Dense(1, activation='sigmoid')  
 ])
 ```
 
 ### Training and Evaluation
+*Hint: look at lab **3** for a refresher on Training and Evaluation*
 Train the LSTM model on the training data and evaluate its performance on the testing data using metrics such as accuracy, precision, recall, and F1-score.
 
 ```python
 # Compile the model
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.compile(loss='binary_crossentropy', optimizer='fill in', metrics=['fill in'])
 
-# Train the model
+# Train the model with a batch_size of 64 and validation split of 0.2
 # Fill in
 
 # Evaluate the model
-# Fill in
+# Fill in: Dont use a verbose
 print(f'Test accuracy: {test_acc:.4f}')
 ```
 
