@@ -51,7 +51,8 @@ Preprocess the text data by performing steps such as removing HTML tags, convert
 *Hint: look at lab **2** for a refresher on Data Preprocessing*
 ```python
 # Load the IMDB dataset (top 5000 most frequent words)
-vocab_size = #fill in # Limit vocabulary for faster training
+vocab_size = #fill in
+# Limit vocabulary for faster training
 (X_train, y_train), (X_test, y_test) = imdb.load_data(num_words=vocab_size)
 ```
 
