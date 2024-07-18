@@ -73,10 +73,10 @@ Build an LSTM model with an embedding layer, LSTM layer(s), and a dense output l
 ```python
 output_dimension = # pick a number from 100-200
 model = Sequential([
-    # Embedding layer: Maps words to dense vectors: Embedding(input_dimension, output_dimension)
-    Embedding(# vocabulary size #, output_dimension), 
+    # Embedding layer: Maps words to dense vectors: Embedding(vocabulary size, output_dimension)
+    Embedding( fill in, output_dimension), 
     # LSTM layer: Captures sequential information
-    LSTM(# output_dimension),  
+    LSTM(output_dimension),  
     # Output layer: Binary classification (positive/negative)
     Dense(1, activation='sigmoid')  
 ])
